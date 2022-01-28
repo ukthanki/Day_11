@@ -84,7 +84,7 @@ def new_game():
 
         print(winner(user_score, computer_score))
 
-        if input("\nDo you want to play another game of Blackjack? Type 'y' or 'n': ") == "y":
+        if input("\nDo you want to restart the Blackjack program? Type 'y' or 'n': ") == "y":
             os.system('cls||clear')
             new_game()
         else:
