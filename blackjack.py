@@ -76,6 +76,7 @@ def new_game():
 
         while computer_score < 16:
             draw(computer_hand)
+            computer_hand = optimize_hand(computer_hand)
             computer_score = total_score(computer_hand)
 
         print(f"Your Final Hand: {user_hand}, Final Score: {user_score}")
