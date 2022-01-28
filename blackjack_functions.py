@@ -25,11 +25,15 @@ def draw(hand):
     hand.append(random.choice(cards))
 
 def winner(user_score, computer_score):
-    if user_score < computer_score:
+    if user_score < computer_score and computer_score <= 21:
+        return "You lose."
+    elif user_score > 21:
         return "You lose."
     elif user_score == computer_score:
         return "Draw."
-    else:
+    elif user_score > computer_score and user_score <= 21:
+        return "You win."
+    elif computer_score > 21:
         return "You win."
 
 def optimize_hand(hand):
